@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: soccer-rpg
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SOLANA_RPC
+        value: https://api.devnet.solana.com
